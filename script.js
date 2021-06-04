@@ -23,9 +23,6 @@ $(document).ready(async function() {
 async function run(){
     const data = await getCords()
     CenterMap(data.long, data.lat)
-    if(markers){
-      map.removeLayer(markers);
-    }
     setMarker(data.long, data.lat)
     if(data.image){
       updateImage(data.image)
@@ -47,6 +44,7 @@ async function run(){
 
   var markers;
   function setMarker(long, lat) {
+    map.removeLayer(markers)
     markers = new ol.layer.Vector({
       source: new ol.source.Vector(),
       style: new ol.style.Style({
