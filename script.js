@@ -8,8 +8,8 @@ $(document).ready(async function() {
     ],
     target: 'map',
     view: new ol.View({
-      center: ol.proj.fromLonLat([31.700001, 26.549999]),
-      zoom: 8,
+      center: ol.proj.fromLonLat([15, 50]),
+      zoom: 2,
     })
   });
 
@@ -20,20 +20,24 @@ $(document).ready(async function() {
     console.log("error fetching from your server", error)
   }
 
-async function run(){
+  async function run() {
     const data = await getCords()
     CenterMap(data.long, data.lat)
     setMarker(data.long, data.lat)
-    if(data.image){
+    if (data.image) {
       updateImage(data.image)
     }
-}
+  }
 
 
 
-  function updateImage(imageSrc){
-    const thiefImage = document.getElementById("thiefImage")
-    thiefImage.src = imageSrc
+  function updateImage(imageSrc) {
+    const thiefImage = document.getElementById("thiefImage");
+    thiefImage.src = imageSrc;
+    document.getElementById("img-caption").innerHTML = `Warning &#10071; &#10071; <br>
+    There is an unknown person in your car &#10071; `
+
+
   }
 
   function CenterMap(long, lat) {
@@ -43,6 +47,7 @@ async function run(){
   }
 
   var markers;
+
   function setMarker(long, lat) {
     map.removeLayer(markers)
     markers = new ol.layer.Vector({

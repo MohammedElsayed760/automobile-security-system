@@ -1,3 +1,6 @@
+
+
+
 html{height: 100%}
 
 body{
@@ -8,7 +11,10 @@ background-color:#e6e6e6;
 
 .map {
         height: 650px;
-        width: 100%;
+        width: 94%;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 1px 20px 0 rgba(93, 93, 93, 1);
       }
 
 .header{
@@ -17,7 +23,7 @@ background-color:#e6e6e6;
   position:fixed;
   display: block;
   background-color:white ;
-  z-index: 1
+   z-index: 1
 }
 
 
@@ -117,6 +123,7 @@ left:10%;
 top:5%;
 margin: 3rem auto ;
 z-index: -1;
+box-shadow: 0 1px 20px 0 rgba(93, 93, 93, 1);
 }
 
 .thief-img{
@@ -130,8 +137,151 @@ z-index: -1;
 
 }
 
-.img-caption p{
-  padding:2rem 1rem;
-  font-size: 1.5rem;
+.img-caption {
+   padding:6rem 1rem;
+  font-size: 1.9rem;
   font-weight: 500 ;
+}
+
+.content-container{
+  width: 88%;
+  height: 90%;
+display: inline-block;
+position: fixed;
+left:12%;
+top:10%;
+z-index: -1;
+}
+
+.user-info{
+  width: 1200px;
+  height: 500px;
+  background-color:white;
+  margin:50px auto;
+  position: relative;
+  box-shadow: 0 1px 20px 0 rgba(93, 93, 93, 1);
+  border-radius: 1rem;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.right{
+  background-color:#0059b3 ;
+  display: inline-block;
+  width: 800px;
+  height: 500px;
+position: absolute;
+left:400px;
+border-top-right-radius: 1rem;
+border-bottom-right-radius: 1rem;
+color: white;
+}
+
+.left{
+  background-color: white;
+  display:inline-block;
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+text-align: center;
+}
+
+
+.user-image{
+height: 350px;
+width: 250px;
+border-radius:0.5rem;
+margin: 50px auto 20px auto;
+
+}
+
+.user-name{
+  color: #003366
+}
+
+.data-block{
+  display: block;
+
+}
+
+.data{
+  display: inline-block;
+  margin: 5% 20% 5% 5%;
+  width: 20%
+}
+
+.user-information{
+  margin: 50px 20px 10px 150px;
+  color: #003366
+}
+
+.conact .data{
+  margin: 10% 2% 2% 10%;
+  width: 80%
+}
+
+.conact .data-block{
+  text-align: left;
+}
+
+
+.key{
+  display: inline-block;
+}
+.value{
+  display: inline-block;
+}
+
+div.key{
+  width: 35%
+}
+ div.value{
+   width: 60%
+ }
+
+ .social_media{
+   width: 60%;
+   display: inline-block;
+   text-align: center;
+   position: relative;
+   top: 20%;
+
+
+ }
+ul{
+  margin: 0
+}
+
+
+ /* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-left: 15%
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }
